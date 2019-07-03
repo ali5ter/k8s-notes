@@ -22,4 +22,5 @@ installed on your macOS system
 TODO: Remove dependency on Fusion and explain how to use hyperkit driver
 
 ## Guides
-1. [Deploy a local cluster](1-deploy-a-local-cluster.md)
+1. [Start a local cluster](1-deploy-a-local-cluster.md)
+2. [Test your cluster with a test deployment](2-test-deployment.md)
