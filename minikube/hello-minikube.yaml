@@ -33,4 +33,4 @@ spec:
         nodePort: 30036
         name: http
     selector:
-      name: mysql
+      name: hello-minikube
