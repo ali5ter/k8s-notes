@@ -1,4 +1,8 @@
 # Test a deployment on your local Kubernetes cluster
+Now you have your own K8s cluster running on your local system, we will deploy
+a super simple sample application on the cluster so we can see the pod and
+service that are created to run the application and provide access to it.
+
 1. Download a yaml file to deploy the minikube sample app using
 ```shell
 curl https://raw.githubusercontent.com/ali5ter/k8s-notes/master/minikube/hello-minikube.yaml -o /tmp/hello-minikube.yaml
@@ -78,7 +82,7 @@ Events:
   Normal  Created    37s   kubelet, minikube  Created container hello-minikube
   Normal  Started    37s   kubelet, minikube  Started container hello-minikube
 ```
-5. Connect to the sample app to test that it responds 
+6. Connect to the sample app to test that it responds 
 ```shell
 $ curl $(minikube service hello-minikube --url)
 CLIENT VALUES:
@@ -105,11 +109,11 @@ BODY:
 $ kubectl logs $(kubectl get pod -o=name -l app=hello-minikube) -f
 172.17.0.1 - - [09/Jul/2019:17:21:51 +0000] "GET / HTTP/1.1" 200 394 "-" "curl/7.54.0"
 ```
-6. Explore how your deployment looks with the kubernetes dashboard UI using
+8. Explore how your deployment looks with the kubernetes dashboard UI using
 ```shell
 minikube dashboard
 ```
-7. Use labels to remove the sample app using
+9. Use labels to remove the sample app using
 ```shell
 kubectl delete deployment,service -l app=hello-minikube
 ```
