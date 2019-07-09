@@ -1,4 +1,4 @@
-# Test a deployment on your local Kubernetes cluster
+# Test your local Kubernetes cluster using a simple deployment
 Now you have your own K8s cluster running on your local system, we will deploy
 a super simple sample application on the cluster so we can see the pod and
 service that are created to run the application and provide access to it.
@@ -11,7 +11,7 @@ curl https://raw.githubusercontent.com/ali5ter/k8s-notes/master/minikube/hello-m
 ```shell
 kubectl apply -f /tmp/hello-minikube.yaml
 ```
-3. Check to see if the pod that contains to deployed sample app is running and
+3. Check to see if the pod that contains the deployed sample app is running and
    accesible via the service
 ```shell
 $ kubectl get services hello-minikube
@@ -32,7 +32,7 @@ replicaset.apps/hello-minikube-69c6558555   1         1         1       3m18s
 ```
 5. Look at the detail of the pod running the sample app container using
 ```shell
-〉kubectl describe pod hello-minikube-69c6558555-fqf8r
+$ kubectl describe pod hello-minikube-69c6558555-fqf8r
 Name:               hello-minikube-69c6558555-fqf8r
 Namespace:          default
 Priority:           0
@@ -117,3 +117,5 @@ minikube dashboard
 ```shell
 kubectl delete deployment,service -l app=hello-minikube
 ```
+
+[Try deploying a more complicated application using the Helm package manager...](3-helm-deployment.md)

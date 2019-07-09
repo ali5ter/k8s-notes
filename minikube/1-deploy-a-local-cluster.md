@@ -5,7 +5,7 @@ Let's stand up a K8s cluster on you local macOS system.
 ```shell
 brew update && brew install kubectl && kubectl version
 ```
-2. Install minicube on macOS using 
+2. Install minikube on macOS using 
 ```shell
 brew cask install minikube
 ```
@@ -30,7 +30,7 @@ minikube config set vm-driver vmware
 ```shell
 minikube addons enable ingres
 ```
-7. Start up Kubernetes cluster
+7. Start up your Kubernetes cluster
 ```shell
 $ minikube start
 Starting local Kubernetes v1.6.4 cluster...
@@ -45,7 +45,7 @@ Setting up kubeconfig...
 Kubectl is now configured to use the cluster.
 ```
 8. If you ever want to see if your local K8s cluster is running, check its
-status using
+   status using
 ```shell
 minikube status
 ```
@@ -63,3 +63,5 @@ minikube delete
 ```
 Note: Deleting the VM means that the next time you do a `minikube start`, a new
 VM will need to be created and will take more time that just stopping and restarting.
+
+[Test your cluster by deploying a very simple application...](2-test-deployment.md)
