@@ -36,16 +36,20 @@ Connecting to cluster...
 Setting up kubeconfig...
 Kubectl is now configured to use the cluster.
 ```
-6. If you ever want to see if your local K8s cluster is running, check its
+7. If you ever want to see if your local K8s cluster is running, check its
 status using
 ```shell
 minikube status
 ```
-7. Stop the cluster at any time using
+8. Explore your cluster with the kubernetes dashboard UI using
+```shell
+minikube dashboard
+```
+9. Stop the cluster at any time using
 ```shell
 minikube stop
 ```
-8. To selete the minikube VM use
+10. To selete the minikube VM use
 ```shell
 minikube delete
 ```

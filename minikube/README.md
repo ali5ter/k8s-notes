@@ -8,7 +8,7 @@ local system, like your laptop, is pretty handy.
 
 [Minikube](https://github.com/kubernetes/minikube) is an application you run on
 your laptop. It provides an extremely convenient way to install and configure a
-single node K8s in a VM on your laptop!
+single node K8s in a VM on your local system!
 
 The following guides hope to help you deloy and play with K8s on your local
 macOS system.
